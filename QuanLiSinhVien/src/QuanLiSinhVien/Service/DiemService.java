@@ -24,4 +24,35 @@ public class DiemService {
         return diemDAL.GetAllDiem();
     }
     
+    public void AddDiem(Diem diem){
+        diemDAL.AddDiem(diem);
+    }
+    
+    public void UpdateDiem(Diem diem){
+        diemDAL.UpdateDiem(diem);
+    }
+    
+    public void DeleteDiem(String id, String maMH, int hocKi){
+        diemDAL.DeleteDiem(id, maMH, hocKi);
+    }
+    
+    public Diem GetDiemByMasv(String id, String maMH, int hocKi)
+    {
+        return diemDAL.GetDiemByMasvDAL(id, maMH, hocKi);
+    }
+    
+    public List<String> GetGetOnlyMasvAll()
+    {
+        return diemDAL.GetOnlyMasvAllDAL();
+    }
+    
+     public List<String> GetGetOnlyMaMHAll()
+    {
+        return diemDAL.GetOnlyMaMHAllDAL();
+    }
+    
+    
+    
+    
+    
 }

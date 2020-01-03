@@ -15,7 +15,8 @@ public class SinhVien {
     private String MaSV;
     private String TenSV;
     private Boolean GioiTinh;
-    private Date NgaySinh;
+    private String GioiTinhString;
+    private String NgaySinh;
     private String QueQuan;
     private String MaLop;
     
@@ -38,8 +39,22 @@ public class SinhVien {
     }
      
      // set get GioiTinh
+      public String GetGioiTinhString(){
+         if(GioiTinh == true)
+         {
+             GioiTinhString = "Nam";
+         }
+         else
+         {
+            GioiTinhString = "Nữ";
+         }
+         return GioiTinhString;
+         
+         
+    }
+      
       public Boolean GetGioiTinh(){
-        return GioiTinh;
+         return GioiTinh;
     }
     
      public void SetGioiTinh(Boolean GioiTinh){
@@ -47,11 +62,11 @@ public class SinhVien {
     }
      
      // set get NgaySinh
-       public Date GetNgaySinh(){
+       public String GetNgaySinh(){
         return NgaySinh;
     }
     
-     public void SetNgaySinh(Date NgaySinh){
+     public void SetNgaySinh(String NgaySinh){
         this.NgaySinh = NgaySinh;
     }
      
@@ -72,4 +87,5 @@ public class SinhVien {
      public void SetMaLop(String MaLop){
         this.MaLop = MaLop;
     }
+
 }   
